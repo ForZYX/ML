@@ -118,7 +118,7 @@ pred = learn.get_preds(dl=d1)[0].argmax(1).numpy()
 
 # 输出最终结果
 out = pd.DataFrame({'PassengerId': test_ext.PassengerId, 'Survived':pred.astype(int)})
-out.to_csv('submission__1.csv', index=False)
+out.to_csv('submission_NN.csv', index=False)
 # out.head()
 
 
