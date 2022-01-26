@@ -91,7 +91,7 @@ tp = TabularPandas(train_ext_filter,
                    splits=splits)
 
 train_dl = TabDataLoader(tp.train, bs=64, shuffle=True, drop_last=True)
-val_dl=TabDataLoader(tp.valid, bs=64)
+val_dl = TabDataLoader(tp.valid, bs=64)
 
 dls = DataLoaders(train_dl, val_dl)
 
