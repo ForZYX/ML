@@ -195,21 +195,21 @@ class FasterRCNN(nn.Module):
                 and the range of their value is :math:`[0, 255]`.
 
         Returns:
-           tuple of lists:
-           This method returns a tuple of three lists,
-           :obj:`(bboxes, labels, scores)`.
+            tuple of lists:
+            This method returns a tuple of three lists,
+            :obj:`(bboxes, labels, scores)`.
 
            * **bboxes**: A list of float arrays of shape :math:`(R, 4)`, \
-               where :math:`R` is the number of bounding boxes in a image. \
-               Each bouding box is organized by \
-               :math:`(y_{min}, x_{min}, y_{max}, x_{max})` \
-               in the second axis.
+                where :math:`R` is the number of bounding boxes in a image. \
+                Each bouding box is organized by \
+                :math:`(y_{min}, x_{min}, y_{max}, x_{max})` \
+                in the second axis.
            * **labels** : A list of integer arrays of shape :math:`(R,)`. \
-               Each value indicates the class of the bounding box. \
-               Values are in range :math:`[0, L - 1]`, where :math:`L` is the \
-               number of the foreground classes.
+                Each value indicates the class of the bounding box. \
+                Values are in range :math:`[0, L - 1]`, where :math:`L` is the \
+                number of the foreground classes.
            * **scores** : A list of float arrays of shape :math:`(R,)`. \
-               Each value indicates how confident the prediction is.
+                Each value indicates how confident the prediction is.
 
         """
         self.eval()
@@ -223,7 +223,7 @@ class FasterRCNN(nn.Module):
                 prepared_imgs.append(img)
                 sizes.append(size)
         else:
-             prepared_imgs = imgs 
+            prepared_imgs = imgs 
         bboxes = list()
         labels = list()
         scores = list()
