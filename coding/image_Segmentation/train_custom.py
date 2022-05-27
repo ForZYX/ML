@@ -166,7 +166,7 @@ def main():
             wandb.log({"Validation Dataset Output Sample": wandb.Image(fig)}, step=e)
 
         # save model
-        weights_dir = '/home/kevinteng/Desktop/weights/'
+        weights_dir = 'weights/'
         if not os.path.exists(weights_dir):
             os.makedirs(weights_dir)
         base_path = os.path.split(weights_dir)[0]
