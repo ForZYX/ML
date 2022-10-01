@@ -17,6 +17,7 @@ import time
 warnings.filterwarnings('ignore')
 wandb.init(project='glandImgSeg', entity='favorai', config='config/config.yaml')
 config = wandb.config
+
 tabular_data = pd.read_csv(config.csv)
 ds_dict = dataloader.get_split_fold(tabular_data)
 patch_size = eval(config.patch_size)

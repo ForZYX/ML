@@ -152,6 +152,7 @@ class DataLoader(DataLoader):
                 seg[i] = seg_data
         return {'data': img, 'seg': seg, 'patient_id': patient_id}
 
+
 if __name__ == "__main__":
     path = 'F:/data/Gland-Segmentation-main/Gland-Segmentation-main/data.csv'
     tabular_data = pd.read_csv(path)
